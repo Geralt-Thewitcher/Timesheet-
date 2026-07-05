@@ -1,6 +1,0 @@
-{
-  "name": "Pulsar Site Timesheet",
-  "description": "Parse, calculate, and format site activity logs into professional timesheets using Gemini AI.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
