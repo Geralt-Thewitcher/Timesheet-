@@ -1,0 +1,8 @@
+{
+  "name": "PowerLog Pro",
+  "description": "Industrial Timesheet, DPR & Report Generator for Engineers",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

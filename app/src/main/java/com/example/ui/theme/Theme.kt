@@ -13,40 +13,39 @@ import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme =
   darkColorScheme(
-    primary = SafetyAmber,
-    onPrimary = TextDark,
-    primaryContainer = SteelGray,
+    primary = AbbRed,
+    onPrimary = TextLight,
+    primaryContainer = AbbRedDark,
     onPrimaryContainer = TextLight,
-    secondary = SafetyAmberLight,
-    onSecondary = TextDark,
-    background = SteelDarkBg,
+    secondary = IndustrialGrey,
+    onSecondary = TextLight,
+    background = IndustrialGreyDark,
     onBackground = TextLight,
-    surface = SteelSurface,
+    surface = IndustrialGrey,
     onSurface = TextLight,
-    error = ErrorRed,
+    error = ErrorColor,
     onError = TextLight
   )
 
 private val LightColorScheme =
   lightColorScheme(
-    primary = SafetyAmber,
-    onPrimary = TextDark,
-    primaryContainer = SteelGrayLight,
-    onPrimaryContainer = TextLight,
-    secondary = SafetyAmberLight,
-    onSecondary = TextDark,
-    background = Color(0xFFF4F6F9),
+    primary = AbbRed,
+    onPrimary = TextLight,
+    primaryContainer = AbbRedLight,
+    onPrimaryContainer = TextDark,
+    secondary = IndustrialGrey,
+    onSecondary = TextLight,
+    background = LightGrey,
     onBackground = TextDark,
     surface = Color.White,
     onSurface = TextDark,
-    error = ErrorRed,
+    error = ErrorColor,
     onError = TextLight
   )
 
 @Composable
 fun MyApplicationTheme(
   darkTheme: Boolean = isSystemInDarkTheme(),
-  // We disable dynamicColor by default to preserve our gorgeous custom brand identity
   dynamicColor: Boolean = false,
   content: @Composable () -> Unit,
 ) {
@@ -56,10 +55,8 @@ fun MyApplicationTheme(
         val context = LocalContext.current
         if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
       }
-
       darkTheme -> DarkColorScheme
       else -> LightColorScheme
     }
-
   MaterialTheme(colorScheme = colorScheme, typography = Typography, content = content)
 }

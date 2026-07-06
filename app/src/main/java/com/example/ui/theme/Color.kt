@@ -2,17 +2,14 @@ package com.example.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Steel & Safety Amber Color Palette
-val SteelDarkBg = Color(0xFF11141E)
-val SteelSurface = Color(0xFF1E2430)
-val SafetyAmber = Color(0xFFFF9800)
-val SafetyAmberLight = Color(0xFFFFB74D)
-val SteelGray = Color(0xFF37474F)
-val SteelGrayLight = Color(0xFF4F5B66)
-val TextLight = Color(0xFFECEFF1)
-val TextDark = Color(0xFF1C1E24)
-val SuccessTeal = Color(0xFF26A69A)
-val ErrorRed = Color(0xFFEF5350)
-val DividerGray = Color(0xFF2D3545)
-val CardBorder = Color(0xFF3B485E)
-
+// ABB Red Theme Colors
+val AbbRed = Color(0xFFDF0024)
+val AbbRedDark = Color(0xFFB0001B)
+val AbbRedLight = Color(0xFFFF4D4D)
+val IndustrialGrey = Color(0xFF2C2C2C)
+val IndustrialGreyDark = Color(0xFF1E1E1E)
+val LightGrey = Color(0xFFF0F0F0)
+val TextLight = Color(0xFFFFFFFF)
+val TextDark = Color(0xFF1A1A1A)
+val SuccessGreen = Color(0xFF00A650)
+val ErrorColor = Color(0xFFD32F2F)

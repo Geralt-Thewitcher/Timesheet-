@@ -5,9 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [SiteLog::class], version = 1, exportSchema = false)
+@Database(entities = [Project::class, ActivityLog::class, Equipment::class], version = 2, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun siteLogDao(): SiteLogDao
+    abstract fun powerLogDao(): PowerLogDao
 
     companion object {
         @Volatile
@@ -18,9 +18,9 @@ abstract class AppDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "site_timesheet_database"
+                    "powerlog_database"
                 )
-                .fallbackToDestructiveMigration()
+                .fallbackToDestructiveMigration(dropAllTables = true)
                 .build()
                 INSTANCE = instance
                 instance
